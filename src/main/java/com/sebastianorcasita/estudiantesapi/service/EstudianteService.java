@@ -17,7 +17,7 @@ public class EstudianteService {
 
     public void crearEstudiante(Estudiante estudiante) {
         if (repository.existePorId(estudiante.getId())) {
-            throw new RuntimeException("El ID ya existe");
+            throw new RuntimeException("El ID del estudiante ya está registrado en el sistema");
         }
         repository.guardar(estudiante);
     }
